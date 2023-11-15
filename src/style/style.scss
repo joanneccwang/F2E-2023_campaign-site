@@ -1,0 +1,44 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  font-size: 16px;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.5;
+}
+h2 {
+  font-size: 32px;
+  line-height: 1.5;
+}
+h3 {
+  font-size: 28px;
+  line-height: 1.5;
+}
+h4 {
+  font-size: 24px;
+  line-height: 1.5;
+}
+h5 {
+  font-size: 20px;
+  line-height: 1.5;
+}
+h6 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#app {
+  width: 100%;
+}

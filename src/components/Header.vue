@@ -1,12 +1,10 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 <template>
   <div id="header">
     <!-- logo -->
     <div id="header_logo">
       <img src="../assets/icons/logo.svg" />
-      <div id="logo_title">喵立翰 Miao Li-Han</div>
+      <h4 id="logo_title">喵立翰 Miao Li-Han</h4>
     </div>
     <!-- menu -->
     <div id="header_menu">
@@ -18,9 +16,15 @@
     </div>
     <!-- social media -->
     <div id="header_social">
-      <div class="social_button"><img src="../assets/icons/social_fb.svg"/></div>
-      <div class="social_button"><img src="../assets/icons/social_ig.svg"/></div>
-      <div class="social_button"><img src="../assets/icons/social_youtube.svg"/></div>
+      <div class="social_button">
+        <img src="../assets/icons/social_fb.svg" />
+      </div>
+      <div class="social_button">
+        <img src="../assets/icons/social_ig.svg" />
+      </div>
+      <div class="social_button">
+        <img src="../assets/icons/social_youtube.svg" />
+      </div>
     </div>
   </div>
 </template>
@@ -39,10 +43,13 @@
 
   display: flex;
   flex-direction: row;
-  align-items:center;
-}
-#logo_title {
-  margin-left: 8px;
+  align-items: center;
+
+  #logo_title {
+    margin-left: 8px;
+    font-weight: bold;
+    color: $color-theme;
+  }
 }
 
 #header_menu {
@@ -72,8 +79,8 @@
 .social_button {
   padding: 2px;
   cursor: pointer;
-  
+
   display: flex;
-  align-items: center;;
+  align-items: center;
 }
 </style>
