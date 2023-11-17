@@ -1,19 +1,23 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue';
+import useMetaInfo from '@/hooks/useMetaInfo.ts';
+import { menu } from '@/utils/menu.ts';
+
+const { metaInfo } = useMetaInfo();
+const menuList = ref(menu);
+</script>
+
 <template>
   <div id="header">
     <div id="header_inner">
       <!-- logo -->
       <div id="header_logo">
         <img src="../assets/icons/logo.svg" />
-        <h4 id="logo_title">喵立翰 Miao Li-Han</h4>
+        <h4 id="logo_title">{{ metaInfo.fullName }}</h4>
       </div>
       <!-- menu -->
       <div id="header_menu">
-        <div class="menu_button">候選人主張</div>
-        <div class="menu_button">最新活動</div>
-        <div class="menu_button">政策議題</div>
-        <div class="menu_button">小額捐款</div>
-        <div class="menu_button">民眾服務信箱</div>
+        <div v-for="menu in menuList" class="menu_button">{{ menu.title }}</div>
       </div>
       <!-- social media -->
       <div id="header_social">
@@ -34,6 +38,11 @@
 <style lang="scss" scoped>
 #header {
   padding: 16px 24px;
+  background: $bg-theme-2;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 #header_inner {
   display: flex;
@@ -42,7 +51,6 @@
 
   background: white;
   border-radius: 12px;
-  position: sticky;
 }
 #header_logo {
   flex: 0 0 auto;
