@@ -1,16 +1,12 @@
 <script setup lang="ts">
-import LayoutTag from '@/components/Layout/Tag.vue';
-import LayoutTitle from '@/components/Layout/Title.vue';
+import PageTitle from '@/components/Layout/PageTitle.vue';
 </script>
 
 <template>
   <section>
     <div id="advocate-card">
       <div class="advocate-content">
-        <div class="advocate-title">
-          <LayoutTag>ADVOCATE</LayoutTag>
-          <LayoutTitle>候選人主張</LayoutTitle>
-        </div>
+        <PageTitle tag="ADVOCATE" title="候選人主張"></PageTitle>
         <div class="advocate-subtitle">
           <h3>
             我堅信 ! 藉由推動更完善的<span class="point">貓咪福利</span
@@ -34,17 +30,17 @@ import LayoutTitle from '@/components/Layout/Title.vue';
 
 <style lang="scss" scoped>
 section {
+  @include section-layout();
+
   background-color: $bg-theme-1;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
   #advocate-card {
-    margin: 40px;
+    @include section-content-layout();
     border-radius: 24px;
 
-    max-width: 1312px;
     width: 100%;
     overflow: hidden;
 
@@ -72,10 +68,6 @@ section {
 }
 
 .advocate-content {
-  .advocate-title {
-    display: flex;
-    flex-direction: column;
-  }
   .advocate-subtitle {
     .point {
       color: $color-theme;

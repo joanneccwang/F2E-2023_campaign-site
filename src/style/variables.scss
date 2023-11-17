@@ -28,6 +28,14 @@ $spacing-md: 64px;
 $spacing-lg: 96px;
 $spacing-exlg: 192px;
 
+@mixin section-layout() {
+  padding: $spacing-md 0px;
+}
+@mixin section-content-layout() {
+  margin: 40px;
+  max-width: 1312px;
+}
+
 
 /** font size */
 $font-base: 18px;
