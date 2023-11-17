@@ -43,6 +43,8 @@ const menuList = ref(menu);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+
+  z-index: 1;
 }
 #header_inner {
   display: flex;
