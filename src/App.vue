@@ -4,6 +4,7 @@ import FrontPage from '@/components/FrontPage.vue';
 import NewsTicker from './components/NewsTicker.vue';
 import Advocate from './components/Advocate.vue';
 import LatestEvents from './components/LatestEvents.vue';
+import Policy from './components/Policy.vue';
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import LatestEvents from './components/LatestEvents.vue';
     <NewsTicker></NewsTicker>
     <Advocate></Advocate>
     <LatestEvents></LatestEvents>
+    <Policy></Policy>
   </div>
 </template>
 
