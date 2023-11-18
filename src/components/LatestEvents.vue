@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { events } from '@/utils/events.ts';
+import { menus } from '@/utils/menu.ts';
 
 import PageTitle from './Layout/PageTitle.vue';
 
 const eventList = ref(events);
 const headline = eventList.value[0];
+const sectionId = menus.event.id;
 </script>
 
 <template>
-  <section>
+  <section :id="`#${sectionId}`">
     <div id="latest-events">
       <PageTitle tag="LATEST EVENTS" title="最新活動"></PageTitle>
       <div id="event-block">

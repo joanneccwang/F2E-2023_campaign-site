@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import PageTitle from '@/components/Layout/PageTitle.vue';
+import { menus } from '@/utils/menu';
+
+const sectionId = menus.advocate.id;
 </script>
 
 <template>
-  <section>
+  <section :id="`#${sectionId}`">
     <div id="advocate-card">
       <div class="advocate-content">
         <PageTitle tag="ADVOCATE" title="候選人主張"></PageTitle>

@@ -1,10 +1,19 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import useMetaInfo from '@/hooks/useMetaInfo.ts';
-import { menu } from '@/utils/menu.ts';
+import { menus } from '@/utils/menu.ts';
 
 const { metaInfo } = useMetaInfo();
-const menuList = ref(menu);
+const menuList = ref(Object.values(menus));
+
+const scrollToSection = (sectionId: string) => {
+  console.log({ sectionId });
+  const theSection = document.getElementById(`#${sectionId}`);
+  console.log({ theSection });
+  if (!theSection) return;
+
+  theSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+};
 </script>
 
 <template>
@@ -17,7 +26,13 @@ const menuList = ref(menu);
       </div>
       <!-- menu -->
       <div id="header_menu">
-        <div v-for="menu in menuList" class="menu_button">{{ menu.title }}</div>
+        <div
+          v-for="menu in menuList"
+          class="menu_button"
+          @click="scrollToSection(menu.id)"
+        >
+          {{ menu.title }}
+        </div>
       </div>
       <!-- social media -->
       <div id="header_social">
