@@ -21,6 +21,8 @@ section {
   @include section-layout();
 }
 #slogan-page {
+  @include section-content-layout();
+  margin: 0px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +30,7 @@ section {
 
   #slogan {
     @include slogan-style();
+
     line-height: 1.5em;
     margin-bottom: $pd-sm;
   }
