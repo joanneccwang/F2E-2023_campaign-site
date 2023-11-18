@@ -35,13 +35,7 @@ section {
   padding-top: $spacing-lg;
 
   #slogan {
-    font-family: Mantou;
-    font-size: 96px;
-    line-height: 1em;
-    background: $color-gradient;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @include slogan-style();
 
     margin-bottom: $pd-sm;
   }
@@ -62,8 +56,7 @@ section {
     justify-content: center;
 
     height: 538px;
-    .public-image-back {
-    }
+
     .public-image-front {
       position: absolute;
     }

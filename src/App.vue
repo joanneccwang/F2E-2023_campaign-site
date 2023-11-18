@@ -5,6 +5,7 @@ import NewsTicker from './components/NewsTicker.vue';
 import Advocate from './components/Advocate.vue';
 import LatestEvents from './components/LatestEvents.vue';
 import Policy from './components/Policy.vue';
+import SloganPage from './components/SloganPage.vue';
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import Policy from './components/Policy.vue';
     <Advocate></Advocate>
     <LatestEvents></LatestEvents>
     <Policy></Policy>
+    <SloganPage></SloganPage>
   </div>
 </template>
 
