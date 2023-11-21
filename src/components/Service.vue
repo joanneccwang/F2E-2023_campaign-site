@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { menus } from '@/utils/menu';
+import Button from '@/components/Global/Button.vue';
 
 const sectionId = menus.email.id;
 </script>
@@ -11,10 +12,8 @@ const sectionId = menus.email.id;
       親愛的鄉親，每一位市民的意見都是我們社區前進的原動力
     </div>
     <div class="theme-card-content">
-      <div class="theme-card-btn">
-        填寫表單
-        <img src="../assets/icons/arrow_forward.svg" />
-      </div>
+      <Button type="white" postfix="arrow">填寫表單</Button>
+
       <div class="theme-card-image">
         <img src="../assets/images/email.png" />
       </div>

@@ -41,24 +41,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    .theme-card-btn {
-      flex: 0 0 auto;
-      border-radius: 500px;
-      border: 1px solid white;
-      background-color: white;
-      font-weight: 600;
-      padding: $pd-sm $pd-md;
-      color: $text-primary;
 
-      cursor: pointer;
-
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-
-      img {
-        margin-left: $pd-base;
-      }
-    }
   }
 }

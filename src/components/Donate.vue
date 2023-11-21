@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { menus } from '@/utils/menu';
+import Button from '@/components/Global/Button.vue';
 
 const sectionId = menus.donate.id;
 </script>
@@ -11,10 +12,8 @@ const sectionId = menus.donate.id;
       您的小筆捐款，是每隻毛孩未來的大大動力！
     </div>
     <div class="theme-card-content">
-      <div class="theme-card-btn">
-        小額捐款
-        <img src="../assets/icons/arrow_forward.svg" />
-      </div>
+      <Button type="white" postfix="arrow">小額捐款</Button>
+
       <div class="theme-card-image">
         <img src="../assets/images/donate.png" />
       </div>

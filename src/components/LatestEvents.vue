@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import { events } from '@/utils/events.ts';
 import { menus } from '@/utils/menu.ts';
 
+import Button from '@/components/Global/Button.vue';
 import PageTitle from './Layout/PageTitle.vue';
 
 const eventList = ref(events);
@@ -33,10 +34,7 @@ const sectionId = menus.event.id;
             </div>
           </div>
 
-          <div id="more-button">
-            查看更多
-            <img src="../assets/icons/arrow_forward.svg" />
-          </div>
+          <Button postfix="arrow" width="100px">查看更多</Button>
         </div>
       </div>
     </div>
@@ -112,23 +110,23 @@ section {
   }
 }
 
-#more-button {
-  align-self: flex-start;
+// #more-button {
+//   align-self: flex-start;
 
-  border-radius: 500px;
-  border: 1px solid white;
-  background-color: $gray-100;
-  font-weight: 600;
-  padding: $pd-sm $pd-md;
+//   border-radius: 500px;
+//   border: 1px solid white;
+//   background-color: $gray-100;
+//   font-weight: 600;
+//   padding: $pd-sm $pd-md;
 
-  cursor: pointer;
+//   cursor: pointer;
 
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
 
-  img {
-    margin-left: $pd-base;
-  }
-}
+//   img {
+//     margin-left: $pd-base;
+//   }
+// }
 </style>
