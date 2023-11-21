@@ -9,11 +9,15 @@ const news = ref([
 
 <template>
   <div id="news-ticker">
-    <div v-for="theNews in news" class="news">{{ theNews }}</div>
+    <div class="marquee">
+      <div v-for="theNews in news" class="news">{{ theNews }}</div>
+      <div v-for="theNews in news" class="news">{{ theNews }}</div>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+$news-width: 720px;
 #news-ticker {
   padding: 10px;
   background-color: $color-theme;
@@ -24,14 +28,34 @@ const news = ref([
   gap: $pd-md;
 
   overflow: hidden;
-  .news {
+  .marquee {
+    display: flex;
+    flex-direction: row;
+
+    width: fit-content;
+
     flex: 0 0 auto;
+
+    transform: translateX(0);
+    animation: marquee 15s linear infinite;
+  }
+  .news {
+    flex: 0 0 $news-width;
     font-family: Mantou;
     font-size: $font-exlg;
     line-height: 1em;
 
     display: flex;
     flex-direction: row;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(-3 * $news-width + -2 * $pd-md), 0, 0);
   }
 }
 </style>
