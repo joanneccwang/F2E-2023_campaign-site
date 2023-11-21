@@ -5,6 +5,7 @@ import NewsTicker from '@/components/NewsTicker.vue';
 import Advocate from '@/components/Advocate.vue';
 import LatestEvents from '@/components/LatestEvents.vue';
 import Policy from '@/components/Policy.vue';
+import DonateAndService from '@/components/DonateAndService.vue';
 import SloganPage from '@/components/SloganPage.vue';
 import Footer from '@/components/Footer.vue';
 </script>
@@ -17,6 +18,7 @@ import Footer from '@/components/Footer.vue';
     <Advocate></Advocate>
     <LatestEvents></LatestEvents>
     <Policy></Policy>
+    <DonateAndService></DonateAndService>
     <SloganPage></SloganPage>
     <Footer></Footer>
   </div>
