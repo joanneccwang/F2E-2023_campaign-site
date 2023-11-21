@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import useMetaInfo from '@/hooks/useMetaInfo';
+import Slogan from './Campaign/Slogan.vue';
 import PositionTag from '@/components/Campaign/PositionTag.vue';
 import FullNameTag from '@/components/Campaign/FullNameTag.vue';
-
-const { metaInfo } = useMetaInfo();
 </script>
 <template>
   <section>
-    <div id="slogan">{{ metaInfo.slogan }}</div>
+    <Slogan></Slogan>
     <div id="info">
       <PositionTag></PositionTag>
       <FullNameTag></FullNameTag>
@@ -34,18 +32,12 @@ section {
 
   padding-top: $spacing-lg;
 
-  #slogan {
-    @include slogan-style();
-
-    margin-bottom: $pd-sm;
-  }
-
   #info {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: $pd-sm;
-    margin-bottom: $pd-sm;
+    margin: $pd-sm 0px;
   }
 
   #public-image {

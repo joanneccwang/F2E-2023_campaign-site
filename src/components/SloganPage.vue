@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import useMetaInfo from '@/hooks/useMetaInfo';
 import FullNameTag from '@/components/Campaign/FullNameTag.vue';
-
-const { metaInfo } = useMetaInfo();
+import Slogan from '@/components/Campaign/Slogan.vue';
 </script>
 
 <template>
   <section>
     <div id="slogan-page">
-      <div id="slogan">{{ metaInfo.slogan }}</div>
+      <Slogan lineHeight="1.5em"></Slogan>
       <div id="info">
         <FullNameTag></FullNameTag>
       </div>
@@ -28,11 +26,8 @@ section {
   align-items: center;
   justify-content: center;
 
-  #slogan {
-    @include slogan-style();
-
-    line-height: 1.5em;
-    margin-bottom: $pd-sm;
+  #info {
+    margin-top: $pd-sm;
   }
 }
 </style>
