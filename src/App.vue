@@ -4,8 +4,8 @@ import FrontPage from '@/components/FrontPage.vue';
 import NewsTicker from '@/components/NewsTicker.vue';
 import Advocate from '@/components/Advocate.vue';
 import LatestEvents from '@/components/LatestEvents.vue';
-import Policy from '@/components/Policy.vue';
-import DonateAndService from '@/components/DonateAndService.vue';
+import Policy from '@/components/Policy/index.vue';
+import DonateAndService from '@/components/DonateAndService/index.vue';
 import SloganPage from '@/components/SloganPage.vue';
 import Footer from '@/components/Footer.vue';
 </script>
