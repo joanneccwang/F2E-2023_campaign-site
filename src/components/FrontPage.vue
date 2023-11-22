@@ -32,11 +32,17 @@ section {
 
   padding-top: $spacing-lg;
 
+  @include pad {
+    padding-top: $pd-lg;
+  }
   #info {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: $pd-sm;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: $pd-sm;
+    row-gap: $pd-base;
     margin: $pd-sm 0px;
   }
 
@@ -49,8 +55,20 @@ section {
 
     height: 538px;
 
+    @include pad {
+      height: 255px;
+    }
+
     .public-image-front {
       position: absolute;
+      height: 100%;
+    }
+    .public-image-back {
+      max-width: 723px;
+
+      @include pad {
+        max-width: 343px;
+      }
     }
   }
 }

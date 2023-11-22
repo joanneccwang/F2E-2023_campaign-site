@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { PropType, defineProps } from 'vue';
+import { PropType, defineProps, inject } from 'vue';
 import useMetaInfo from '@/hooks/useMetaInfo';
+import { deviceTypeKey } from '@/utils/injectionKeys';
 
 import Number from './Number.vue';
 
 const { metaInfo } = useMetaInfo();
 
+const deviceType = inject(deviceTypeKey);
 defineProps({
   size: {
     type: String as PropType<'lg' | 'md'>,
@@ -17,7 +19,10 @@ defineProps({
   <div class="campaign-fullname">
     <Number :size="size"></Number>
     <template v-if="size === 'lg'">
-      <h1 class="campaign-title">{{ metaInfo.fullName }}</h1>
+      <h1 v-if="deviceType === 'Desktop'" class="campaign-title">
+        {{ metaInfo.fullName }}
+      </h1>
+      <h3 v-else class="campaign-title">{{ metaInfo.fullName }}</h3>
     </template>
     <template v-else-if="size === 'md'">
       <h3 class="campaign-title">{{ metaInfo.fullName }}</h3>

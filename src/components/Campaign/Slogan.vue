@@ -39,5 +39,9 @@ defineProps({
   align-items: center;
   justify-content: center;
   column-gap: 48px;
+
+  @include pad {
+    font-size: 52px;
+  }
 }
 </style>

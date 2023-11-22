@@ -47,6 +47,10 @@ $news-width: 720px;
 
     display: flex;
     flex-direction: row;
+
+    @include pad {
+      font-size: $font-lg;
+    }
   }
 }
 
