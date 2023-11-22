@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { events } from '@/utils/events.ts';
-import { menus } from '@/utils/menu.ts';
+import { events } from '@/utils/events';
+import { menus } from '@/utils/menu';
 
 import Button from '@/components/Global/Button.vue';
 import PageTitle from './Layout/PageTitle.vue';

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import useMetaInfo from '@/hooks/useMetaInfo.ts';
-import { menus } from '@/utils/menu.ts';
+import { menus } from '@/utils/menu';
 
 const { metaInfo } = useMetaInfo();
 const menuList = ref(Object.values(menus));
