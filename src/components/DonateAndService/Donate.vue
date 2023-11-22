@@ -15,7 +15,7 @@ const sectionId = menus.donate.id;
       <Button type="white" postfix="arrow">小額捐款</Button>
 
       <div class="theme-card-image">
-        <img src="../assets/images/donate.png" />
+        <img src="../../assets/images/donate.png" />
       </div>
     </div>
   </div>

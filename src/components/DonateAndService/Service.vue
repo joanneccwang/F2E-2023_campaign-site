@@ -15,7 +15,7 @@ const sectionId = menus.email.id;
       <Button type="white" postfix="arrow">填寫表單</Button>
 
       <div class="theme-card-image">
-        <img src="../assets/images/email.png" />
+        <img src="../../assets/images/email.png" />
       </div>
     </div>
   </div>
