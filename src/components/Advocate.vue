@@ -6,7 +6,7 @@ const sectionId = menus.advocate.id;
 </script>
 
 <template>
-  <section :id="`#${sectionId}`">
+  <section :id="`${sectionId}`">
     <div id="advocate-card">
       <div class="advocate-content">
         <PageTitle tag="ADVOCATE" title="候選人主張"></PageTitle>

@@ -12,7 +12,7 @@ const sectionId = menus.event.id;
 </script>
 
 <template>
-  <section :id="`#${sectionId}`">
+  <section :id="`${sectionId}`">
     <div id="latest-events">
       <PageTitle tag="LATEST EVENTS" title="最新活動"></PageTitle>
       <div id="event-block">

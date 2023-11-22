@@ -12,6 +12,11 @@ $mobile-max-width: 576px;
     @content;
   }
 }
+@mixin header-pad {
+  @media(max-width: 1100px) {
+    @content;
+  }
+}
 
 /** Example */
 // .some-div {

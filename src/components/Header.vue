@@ -1,19 +1,17 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, inject } from 'vue';
 import useMetaInfo from '@/hooks/useMetaInfo.ts';
+import useScrollToSection from '@/hooks/useScrollToSection';
 import { menus } from '@/utils/menu';
+import { deviceTypeKey, shouldBreakHeaderKey } from '@/utils/injectionKeys';
 
 const { metaInfo } = useMetaInfo();
+const { scrollToSection } = useScrollToSection();
+
 const menuList = ref(Object.values(menus));
 
-const scrollToSection = (sectionId: string) => {
-  console.log({ sectionId });
-  const theSection = document.getElementById(`#${sectionId}`);
-  console.log({ theSection });
-  if (!theSection) return;
-
-  theSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-};
+const deviceType = inject(deviceTypeKey);
+const shouldBreakHeader = inject(shouldBreakHeaderKey);
 </script>
 
 <template>
@@ -25,7 +23,10 @@ const scrollToSection = (sectionId: string) => {
         <h4 id="logo_title">{{ metaInfo.fullName }}</h4>
       </div>
       <!-- menu -->
-      <div id="header_menu">
+      <div
+        v-if="deviceType === 'Desktop' && !shouldBreakHeader"
+        id="header_menu"
+      >
         <div
           v-for="menu in menuList"
           class="menu_button"
@@ -64,6 +65,7 @@ const scrollToSection = (sectionId: string) => {
 #header_inner {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   padding: 12px 24px;
 
   background: white;
@@ -93,6 +95,7 @@ const scrollToSection = (sectionId: string) => {
   gap: 16px;
 
   .menu_button {
+    flex: 0 0 auto;
     padding: 8px;
     cursor: pointer;
     color: $text-primary;

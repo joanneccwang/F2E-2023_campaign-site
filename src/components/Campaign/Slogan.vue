@@ -16,7 +16,9 @@ defineProps({
 </script>
 
 <template>
-  <div class="slogan" :style="{ lineHeight }">{{ metaInfo.slogan }}</div>
+  <div class="slogan" :style="{ lineHeight }">
+    <div v-for="slogan in metaInfo.slogan">{{ slogan }}</div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -30,5 +32,12 @@ defineProps({
   -webkit-text-fill-color: transparent;
 
   text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 48px;
 }
 </style>

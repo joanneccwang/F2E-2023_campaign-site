@@ -6,7 +6,7 @@ const sectionId = menus.policy.id;
 </script>
 
 <template>
-  <section :id="`#${sectionId}`">
+  <section :id="`${sectionId}`">
     <div id="policy-issue">
       <div class="advocate-content">
         <PageTitle tag="POLICY ISSUES" title="政策議題"></PageTitle>

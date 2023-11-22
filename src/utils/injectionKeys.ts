@@ -1,4 +1,8 @@
-import { DeviceType } from '@/utils/typings';
-import { InjectionKey } from 'vue';
+import { InjectionKey, ComputedRef, Ref } from 'vue';
 
-export const deviceTypeKey: InjectionKey<DeviceType> = Symbol('deviceType');
+import { DeviceType } from '@/utils/typings';
+
+export const deviceTypeKey: InjectionKey<ComputedRef<DeviceType>> =
+  Symbol('deviceType');
+export const shouldBreakHeaderKey: InjectionKey<Ref<Boolean>> =
+  Symbol('shouldBreakHeader');
