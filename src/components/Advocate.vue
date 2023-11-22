@@ -1,8 +1,15 @@
 <script setup lang="ts">
+import { inject } from 'vue';
+
 import PageTitle from '@/components/Layout/PageTitle.vue';
+import { deviceTypeKey } from '@/utils/injectionKeys';
 import { menus } from '@/utils/menu';
 
 const sectionId = menus.advocate.id;
+
+const deviceType = inject(deviceTypeKey);
+const advocate = `我堅信 ! 藉由推動更完善的<span class="point">貓咪福利</span
+            >和相關政策，更是間接地投資於<span class="point">台灣的未來</span>。`;
 </script>
 
 <template>
@@ -11,10 +18,8 @@ const sectionId = menus.advocate.id;
       <div class="advocate-content">
         <PageTitle tag="ADVOCATE" title="候選人主張"></PageTitle>
         <div class="advocate-subtitle">
-          <h3>
-            我堅信 ! 藉由推動更完善的<span class="point">貓咪福利</span
-            >和相關政策，更是間接地投資於<span class="point">台灣的未來</span>。
-          </h3>
+          <h3 v-if="deviceType === 'Desktop'" v-html="advocate"></h3>
+          <h4 v-else v-html="advocate"></h4>
         </div>
         <div class="advocate-desc">
           <p>
@@ -52,6 +57,10 @@ section {
     flex-direction: row;
     gap: $pd-sm;
 
+    @include pad {
+      flex-direction: column;
+    }
+
     .advocate-content {
       flex: 1;
       display: flex;
@@ -66,13 +75,20 @@ section {
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
+
+      @include pad {
+        height: 500px;
+      }
+      @include mobile {
+        height: 300px;
+      }
     }
   }
 }
 
 .advocate-content {
   .advocate-subtitle {
-    .point {
+    :deep(.point) {
       color: $color-theme;
     }
   }

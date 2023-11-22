@@ -12,7 +12,7 @@
   background: $text-primary;
   color: white;
   padding: $pd-base $pd-s;
-
+  font-size: $font-body;
   align-self: center;
 }
 </style>

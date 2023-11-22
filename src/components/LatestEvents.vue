@@ -52,16 +52,25 @@ section {
 
   #latest-events {
     @include section-content-layout();
+
+    @include pad {
+      margin: 0px 40px;
+    }
   }
 }
 
 #event-block {
   display: flex;
   flex-direction: row;
-  gap: $pd-sm;
+  column-gap: $pd-sm;
+  row-gap: $pd-md;
 
   margin-top: $spacing-md;
   overflow: hidden;
+
+  @include pad {
+    flex-direction: column;
+  }
   .event-main {
     flex: 1;
     overflow: hidden;
@@ -109,24 +118,4 @@ section {
     }
   }
 }
-
-// #more-button {
-//   align-self: flex-start;
-
-//   border-radius: 500px;
-//   border: 1px solid white;
-//   background-color: $gray-100;
-//   font-weight: 600;
-//   padding: $pd-sm $pd-md;
-
-//   cursor: pointer;
-
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-
-//   img {
-//     margin-left: $pd-base;
-//   }
-// }
 </style>

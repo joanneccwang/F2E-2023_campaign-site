@@ -16,5 +16,9 @@
   -webkit-text-fill-color: transparent;
 
   align-self: center;
+
+  @include pad {
+    font-size: 52px;
+  }
 }
 </style>
