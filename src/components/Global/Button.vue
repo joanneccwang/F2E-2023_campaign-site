@@ -12,7 +12,7 @@ defineProps({
   },
   width: {
     type: String,
-    default: 'auto',
+    default: '120px',
   },
 });
 </script>
@@ -30,7 +30,7 @@ defineProps({
 <style lang="scss" scoped>
 .button {
   width: auto;
-  min-width: 120px;
+  width: 120px;
   flex: 0 0 auto;
   border-radius: 500px;
   border: 1px solid white;

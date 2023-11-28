@@ -15,6 +15,10 @@
   border-radius: 32px;
   background-color: $color-theme;
 
+  @include mobile {
+    padding: 40px $pd-md;
+  }
+
   .theme-card-title {
     font-size: 52px;
     font-family: mantou;

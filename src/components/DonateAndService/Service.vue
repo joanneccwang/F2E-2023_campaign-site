@@ -12,7 +12,7 @@ const sectionId = menus.email.id;
       親愛的鄉親，每一位市民的意見都是我們社區前進的原動力
     </div>
     <div class="theme-card-content">
-      <Button type="white" postfix="arrow">填寫表單</Button>
+      <Button type="white" postfix="arrow" width="150px">填寫表單</Button>
 
       <div class="theme-card-image">
         <img src="../../assets/images/email.png" />

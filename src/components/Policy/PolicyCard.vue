@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { PropType } from 'vue';
+import Button from '@/components/Global/Button.vue';
 
 defineProps({
   title: { type: String, required: true },
@@ -21,6 +22,7 @@ defineProps({
         {{ tag?.tag }}
       </div>
       <h4 class="policy-title" v-html="title"></h4>
+      <Button type="primary" postfix="arrow">查看</Button>
     </div>
   </div>
 </template>
@@ -38,6 +40,9 @@ defineProps({
 
   cursor: pointer;
 
+  @include mobile {
+    flex: 0 0 100%;
+  }
   .policy-image {
     flex: 0 0 auto;
     padding-bottom: $pd-md;
@@ -60,6 +65,7 @@ defineProps({
     }
     .policy-title {
       font-weight: 700;
+      margin-bottom: 40px;
     }
   }
 }
