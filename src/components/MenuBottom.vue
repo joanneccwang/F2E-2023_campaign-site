@@ -4,6 +4,7 @@ import { ref, inject } from 'vue';
 import useScrollToSection from '@/hooks/useScrollToSection';
 import { menus } from '@/utils/menu';
 import { deviceTypeKey, shouldBreakHeaderKey } from '@/utils/injectionKeys';
+import Icon from '@/components/Global/Icon.vue';
 
 const { scrollToSection } = useScrollToSection();
 const menuList = ref(Object.values(menus));
@@ -19,7 +20,7 @@ const shouldBreakHeader = inject(shouldBreakHeaderKey);
       class="menu_button"
       @click="scrollToSection(menu.id)"
     >
-      <!-- <img :src="menu.icon" /> -->
+      <Icon :name="menu.icon"></Icon>
       <div>{{ menu.title }}</div>
     </div>
   </div>
@@ -27,7 +28,7 @@ const shouldBreakHeader = inject(shouldBreakHeaderKey);
 
 <style lang="scss" scoped>
 #menu-bottom {
-  position: fixed;
+  position: sticky;
   bottom: 0px;
   z-index: 1;
 
@@ -52,6 +53,7 @@ const shouldBreakHeader = inject(shouldBreakHeaderKey);
 
     @include mobile {
       font-size: $font-minor;
+      padding: $pd-s 0px;
     }
   }
 }

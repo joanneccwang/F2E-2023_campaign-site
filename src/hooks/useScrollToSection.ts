@@ -3,7 +3,7 @@ const useScrollToSection = function () {
     const theSection = document.getElementById(`${sectionId}`);
     if (!theSection) return;
 
-    theSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    theSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return {

@@ -26,5 +26,13 @@ const sectionId = menus.email.id;
   @include theme-card();
   background-color: $text-primary;
   flex: 1;
+
+  @include mobile {
+    .theme-card-image {
+      img {
+        max-width: 135px;
+      }
+    }
+  }
 }
 </style>

@@ -1,15 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Icon from '@/components/Global/Icon.vue';
+</script>
 
 <template>
   <div id="social-buttons">
     <div class="social_button">
-      <img src="../../assets/icons/social_fb.svg" />
+      <Icon name="social_fb"></Icon>
     </div>
     <div class="social_button">
-      <img src="../../assets/icons/social_ig.svg" />
+      <Icon name="social_ig"></Icon>
     </div>
     <div class="social_button">
-      <img src="../../assets/icons/social_youtube.svg" />
+      <Icon name="social_youtube"></Icon>
     </div>
   </div>
 </template>
