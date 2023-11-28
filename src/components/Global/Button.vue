@@ -21,7 +21,11 @@ defineProps({
 <template>
   <div class="button" :class="`button-${type}`" :style="{ width }">
     <slot></slot>
-    <Icon v-if="postfix === 'arrow'" name="arrow_forward"></Icon>
+    <Icon
+      v-if="postfix === 'arrow'"
+      name="arrow_forward"
+      class="postfix-icon"
+    ></Icon>
   </div>
 </template>
 
@@ -55,7 +59,7 @@ defineProps({
     color: white;
   }
 
-  img {
+  .postfix-icon {
     margin-left: $pd-base;
   }
 }

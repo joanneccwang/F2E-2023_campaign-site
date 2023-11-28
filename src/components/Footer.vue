@@ -10,7 +10,7 @@ import FullName from '@/components/Campaign/FullName.vue';
         <FullName size="md"></FullName>
         <div class="social-btns">
           <div class="social-btn">
-            <Icon name="social_fg"></Icon>
+            <Icon name="social_fb"></Icon>
           </div>
           <div class="social-btn">
             <Icon name="social_ig"></Icon>
