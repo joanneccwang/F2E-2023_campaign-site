@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { PropType } from 'vue';
+import Icon from '@/components/Global/Icon.vue';
 
 defineProps({
   type: {

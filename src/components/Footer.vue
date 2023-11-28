@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Icon from '@/components/Global/Icon.vue';
 import FullName from '@/components/Campaign/FullName.vue';
 </script>
 
