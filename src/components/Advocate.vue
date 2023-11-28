@@ -68,6 +68,10 @@ section {
       gap: $pd-lg;
 
       padding: $spacing-md 40px;
+
+      @include mobile {
+        padding: 40px $pd-md;
+      }
     }
     .advocate-image {
       flex: 1 0 auto;

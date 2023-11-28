@@ -26,5 +26,13 @@ const sectionId = menus.donate.id;
   @include theme-card();
   background-color: $color-theme;
   flex: 1;
+
+  @include mobile {
+    .theme-card-image {
+      img {
+        max-width: 135px;
+      }
+    }
+  }
 }
 </style>

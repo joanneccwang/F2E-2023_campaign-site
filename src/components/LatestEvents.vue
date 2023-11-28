@@ -56,6 +56,9 @@ section {
     @include pad {
       margin: 0px 40px;
     }
+    @include mobile {
+      margin: 0px $pd-md;
+    }
   }
 }
 
@@ -92,6 +95,12 @@ section {
 
       .event-img {
         flex: 0 0 200px;
+        height: fit-content;
+
+        @include mobile {
+          flex: 0 0 110px;
+          width: 150px;
+        }
       }
       .event-preview {
         flex: 1;
@@ -108,12 +117,24 @@ section {
       display: flex;
       flex-direction: column;
       gap: $pd-base;
+
       .event-date {
         font-size: $font-sm;
         color: $gray-400;
       }
       .event-title {
         font-weight: 700;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+
+      .event-content {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
       }
     }
   }

@@ -57,6 +57,7 @@ const shouldBreakHeader = inject(shouldBreakHeaderKey);
   z-index: 1;
 
   @include mobile {
+    position: relative;
     padding: $pd-s $pd-sm;
   }
 }

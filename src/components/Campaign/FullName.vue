@@ -22,7 +22,10 @@ defineProps({
       <h1 v-if="deviceType === 'Desktop'" class="campaign-title">
         {{ metaInfo.fullName }}
       </h1>
-      <h3 v-else class="campaign-title">{{ metaInfo.fullName }}</h3>
+      <h3 v-else-if="deviceType === 'Tablet'" class="campaign-title">
+        {{ metaInfo.fullName }}
+      </h3>
+      <h4 v-else class="campaign-title">{{ metaInfo.fullName }}</h4>
     </template>
     <template v-else-if="size === 'md'">
       <h3 class="campaign-title">{{ metaInfo.fullName }}</h3>

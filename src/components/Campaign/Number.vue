@@ -43,6 +43,7 @@ const numberStyle = computed(() => {
   background: $color-gradient;
   color: white;
   font-size: 32px;
+  font-weight: 900;
   border-radius: 100%;
 }
 </style>

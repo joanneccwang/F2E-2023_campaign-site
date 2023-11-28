@@ -4,6 +4,10 @@
 @mixin section-content-layout() {
   margin: 40px;
   max-width: 1312px;
+
+  @include mobile {
+    margin: 0px 16px;
+  }
 }
 
 @mixin theme-card() {
@@ -15,9 +19,7 @@
   border-radius: 32px;
   background-color: $color-theme;
 
-  @include mobile {
-    padding: 40px $pd-md;
-  }
+
 
   .theme-card-title {
     font-size: 52px;
@@ -33,5 +35,15 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+
+  @include mobile {
+    padding: 40px $pd-md;
+
+    max-width: 100%;
+
+    .theme-card-title {
+      font-size: 40px;
+    }
   }
 }

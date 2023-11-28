@@ -50,9 +50,10 @@ section {
     flex-direction: row;
     flex-wrap: wrap;
     gap: $pd-sm;
+    overflow: hidden;
 
     .footer-block {
-      flex: 1 0 auto;
+      flex: 1 1 auto;
       display: flex;
       flex-direction: column;
       gap: $pd-sm;
@@ -60,6 +61,7 @@ section {
       .contact {
         display: flex;
         flex-direction: column;
+        word-break: break-all;
       }
     }
   }
