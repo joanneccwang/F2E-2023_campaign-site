@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, inject } from 'vue';
+import Icon from '@/components/Global/Icon.vue';
 import SocialButtons from '@/components/Layout/SocialButtons.vue';
 import useMetaInfo from '@/hooks/useMetaInfo.ts';
 import useScrollToSection from '@/hooks/useScrollToSection';
@@ -20,7 +21,7 @@ const shouldBreakHeader = inject(shouldBreakHeaderKey);
     <div id="header_inner">
       <!-- logo -->
       <div id="header_logo">
-        <img src="../assets/icons/logo.svg" />
+        <Icon name="logo"></Icon>
         <h5 v-if="deviceType === 'Mobile'" id="logo_title">
           {{ metaInfo.fullName }}
         </h5>
