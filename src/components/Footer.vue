@@ -9,13 +9,13 @@ import FullName from '@/components/Campaign/FullName.vue';
         <FullName size="md"></FullName>
         <div class="social-btns">
           <div class="social-btn">
-            <img src="../assets/icons/social_fb.svg" />
+            <Icon name="social_fg"></Icon>
           </div>
           <div class="social-btn">
-            <img src="../assets/icons/social_ig.svg" />
+            <Icon name="social_ig"></Icon>
           </div>
           <div class="social-btn">
-            <img src="../assets/icons/social_youtube.svg" />
+            <Icon name="social_youtube"></Icon>
           </div>
         </div>
         <div>© 2023 喵立翰 Miao Li-Han 版權所有</div>

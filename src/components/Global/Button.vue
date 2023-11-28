@@ -20,10 +20,7 @@ defineProps({
 <template>
   <div class="button" :class="`button-${type}`" :style="{ width }">
     <slot></slot>
-    <img
-      v-if="postfix === 'arrow'"
-      src="../../assets/icons/arrow_forward.svg"
-    />
+    <Icon v-if="postfix === 'arrow'" name="arrow_forward"></Icon>
   </div>
 </template>
 
