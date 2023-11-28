@@ -34,7 +34,7 @@ const sectionId = menus.event.id;
             </div>
           </div>
 
-          <Button postfix="arrow" width="100px">查看更多</Button>
+          <Button postfix="arrow" width="150px">查看更多</Button>
         </div>
       </div>
     </div>
