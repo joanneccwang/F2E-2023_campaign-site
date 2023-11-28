@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, inject } from 'vue';
+import SocialButtons from '@/components/Layout/SocialButtons.vue';
 import useMetaInfo from '@/hooks/useMetaInfo.ts';
 import useScrollToSection from '@/hooks/useScrollToSection';
 import { menus } from '@/utils/menu';
@@ -20,7 +21,10 @@ const shouldBreakHeader = inject(shouldBreakHeaderKey);
       <!-- logo -->
       <div id="header_logo">
         <img src="../assets/icons/logo.svg" />
-        <h4 id="logo_title">{{ metaInfo.fullName }}</h4>
+        <h5 v-if="deviceType === 'Mobile'" id="logo_title">
+          {{ metaInfo.fullName }}
+        </h5>
+        <h4 v-else id="logo_title">{{ metaInfo.fullName }}</h4>
       </div>
       <!-- menu -->
       <div
@@ -36,17 +40,7 @@ const shouldBreakHeader = inject(shouldBreakHeaderKey);
         </div>
       </div>
       <!-- social media -->
-      <div id="header_social">
-        <div class="social_button">
-          <img src="../assets/icons/social_fb.svg" />
-        </div>
-        <div class="social_button">
-          <img src="../assets/icons/social_ig.svg" />
-        </div>
-        <div class="social_button">
-          <img src="../assets/icons/social_youtube.svg" />
-        </div>
-      </div>
+      <SocialButtons v-if="deviceType !== 'Mobile'"></SocialButtons>
     </div>
   </div>
 </template>
@@ -61,6 +55,10 @@ const shouldBreakHeader = inject(shouldBreakHeaderKey);
   top: 0;
 
   z-index: 1;
+
+  @include mobile {
+    padding: $pd-s $pd-sm;
+  }
 }
 #header_inner {
   display: flex;
@@ -70,6 +68,10 @@ const shouldBreakHeader = inject(shouldBreakHeaderKey);
 
   background: white;
   border-radius: 12px;
+
+  @include mobile {
+    padding: 0px;
+  }
 }
 #header_logo {
   flex: 0 0 auto;
@@ -100,23 +102,6 @@ const shouldBreakHeader = inject(shouldBreakHeaderKey);
     cursor: pointer;
     color: $text-primary;
     font-size: $font-base;
-  }
-}
-
-#header_social {
-  flex: 0 0 auto;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
-
-  .social_button {
-    padding: 2px;
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
   }
 }
 </style>

@@ -1,7 +1,12 @@
 <script setup lang="ts">
+import { inject } from 'vue';
 import Slogan from './Campaign/Slogan.vue';
 import PositionTag from '@/components/Campaign/PositionTag.vue';
 import FullNameTag from '@/components/Campaign/FullNameTag.vue';
+import SocialButtons from '@/components/Layout/SocialButtons.vue';
+import { deviceTypeKey } from '@/utils/injectionKeys';
+
+const deviceType = inject(deviceTypeKey);
 </script>
 <template>
   <section>
@@ -20,11 +25,16 @@ import FullNameTag from '@/components/Campaign/FullNameTag.vue';
         src="../assets/images/public-image-front.png"
       />
     </div>
+    <SocialButtons
+      v-if="deviceType === 'Mobile'"
+      class="social-button-fix"
+    ></SocialButtons>
   </section>
 </template>
 
 <style lang="scss" scoped>
 section {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,6 +80,11 @@ section {
         max-width: 343px;
       }
     }
+  }
+
+  .social-button-fix {
+    position: absolute;
+    bottom: 20px;
   }
 }
 </style>
